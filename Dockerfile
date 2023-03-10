@@ -7,8 +7,10 @@ WORKDIR /app
 # Install dependencies
 RUN set -ex; \
     \
-	apk add --no-cache --virtual .build-deps --update \
-		build-base \
+	apk add --no-cache --virtual .build-deps \
+    #--update \
+    libffi-dev \
+		#build-base \
     #alpine-sdk \
     ; \
     \
